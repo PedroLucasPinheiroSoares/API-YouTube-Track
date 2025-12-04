@@ -64,3 +64,180 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/240px-Laravel.svg.png" width="140" alt="Laravel Logo">
+</p>
+
+<p align="center">
+  <strong>API YouTube Data – Projeto Educacional (SENAI)</strong><br>
+  API RESTful desenvolvida em Laravel para consultar e exibir métricas públicas de canais do YouTube.
+</p>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/Laravel-10.x-red?style=for-the-badge&logo=laravel"></a>
+  <a href="#"><img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php"></a>
+  <a href="#"><img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Postman-Tests-orange?style=for-the-badge&logo=postman"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge"></a>
+</p>
+
+---
+
+# 📡 Sobre o Projeto
+
+Esta API foi desenvolvida como parte das atividades práticas do **Curso Técnico em Desenvolvimento de Sistemas – SENAI**.  
+O objetivo é consumir dados públicos da **YouTube Data API** e disponibilizar informações estruturadas em **JSON** para uso em aplicações front-end.
+
+O projeto foi desenvolvido em dupla, com ambos integrantes atuando em **Back-End, Front-End e Documentação**.
+
+---
+
+# 🎯 Funcionalidades Principais
+- 🔍 Consulta de canais do YouTube  
+- 📊 Retorno estruturado em JSON  
+- ↕️ Filtros (inscritos, views, vídeos)  
+- 🔄 Ordenação dinâmica  
+- ⚙️ Endpoints RESTful  
+- 🧪 Testes e documentação via Postman  
+- 🧰 Estrutura organizada com Controllers, Routes e Services  
+
+---
+
+# 🛠 Tecnologias Utilizadas
+
+| Camada | Tecnologias |
+|-------|-------------|
+| **Back-End** | Laravel, PHP 8+, Composer |
+| **Banco de Dados** | MySQL (via XAMPP) |
+| **Testes** | Postman |
+| **API Externa** | YouTube Data API v3 |
+| **Retorno** | JSON |
+
+---
+
+# ⚠️ Importante Sobre Ambiente e Segurança
+
+### 🔐 Uso de `.env` e GitIgnore
+Em projetos reais, arquivos como `.env` **NUNCA** devem ser enviados ao repositório por conter informações sensíveis (senhas, tokens, etc.).  
+
+👉 **Como este é um projeto educacional, os dados são fictícios e não representam risco.**  
+Mesmo assim, o ideal seria configurar corretamente o `.gitignore` em ambientes profissionais.
+
+---
+
+# 🗄 Configuração do Banco de Dados (XAMPP)
+
+Este projeto utiliza:
+- **XAMPP**
+- **MySQL**
+- **phpMyAdmin**
+
+Crie um banco de dados antes de iniciar:
+
+```
+Nome do banco: youtube_api
+```
+
+> O usuário deve alterar o nome do banco, usuário e senha no arquivo `.env` conforme seu ambiente.
+
+Exemplo de configuração:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=youtube_api
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+# 🚀 Como Executar o Projeto
+
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/seuusuario/seu-repositorio-api.git
+```
+
+### 2️⃣ Instalar dependências
+```bash
+composer install
+```
+
+### 3️⃣ Criar o arquivo de ambiente
+```bash
+cp .env.example .env
+```
+
+### 4️⃣ Inserir sua API KEY do YouTube
+No arquivo `.env`:
+
+```
+YOUTUBE_API_KEY=SUA_CHAVE_AQUI
+```
+
+### 5️⃣ Gerar a chave da aplicação
+```bash
+php artisan key:generate
+```
+
+### 6️⃣ Iniciar o servidor
+```bash
+php artisan serve
+```
+
+Servidor rodando em:
+```
+http://localhost:8000
+```
+
+---
+
+# 📚 Endpoints Principais
+
+| Método | Endpoint | Descrição |
+|--------|----------|-----------|
+| GET | `/api/canais` | Lista todos os canais |
+| GET | `/api/canal/{id}` | Retorna informações de um canal |
+| GET | `/api/canais?filtro=inscritos` | Filtragem dinâmica |
+| GET | `/api/canais?ordenar=desc` | Ordenação |
+
+Documentação completa disponível via **Postman**.
+
+---
+
+# 🧪 Testes com Postman
+
+- Testes de rotas  
+- Validação de respostas JSON  
+- Conferência de filtros e ordenações  
+- Geração automática da documentação técnica  
+
+---
+
+# 👨‍💻 Desenvolvedores
+
+Projeto criado em dupla:
+
+- **Pedro Lucas Pinheiro Soares**  
+- **Miguel William Abrame**
+
+Ambos responsáveis por:
+✔ Back-End  
+✔ Front-End  
+✔ Testes  
+✔ Documentação  
+
+---
+
+# 📄 Licença
+
+Este é um projeto **exclusivamente educacional**.  
+Uso permitido para fins de estudo, portfólio e demonstração.
+
+---
+
+<p align="center">Desenvolvido com ❤️ no SENAI</p>
